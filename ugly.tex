@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parcolumns}
+\usepackage{ulem}
+\newcommand{\secdes}{\subsection{Description}}
+\newcommand{\secinput}{\subsection{Input}}
+\newcommand{\secoutput}{\subsection{Output}}
+\newcommand{\secsample}{\subsection{Sample}}
+\newcommand{\sechint}{\subsection{Hint}}
+\newcommand{\sample}[2]{\begin{tabular}{@{\extracolsep{\fill}}|l|l|}
+\hline
+Sample Input & Sample Output \\
+\hline
+\begin{tabular}{@{}l@{}}#1\end{tabular} & \begin{tabular}{l}#2\end{tabular}\\
+\hline
+\end{tabular}}%
+\begin{document}
+\section{Ugly problem}
+
+\secdes
+
+Everyone hate ugly problems.
+
+You are given a positive integer. You must represent that number by sum of palindromic numbers.
+
+A palindromic number is a positive integer such that if you write out that integer as a string in decimal  without leading zeroes, the string is an palindrome. For examples, $1$ is a palindromic number and $10$ is not.
+
+\secinput
+
+\indent The input contains multiple test cases.
+
+The first line contains an integer $T$, the number of test cases.
+
+Then $T$ lines follows. In each line, there's a positive integer $s(1\le s\le 10^{1000})$.
+
+\secoutput
+For each test case, output ``Case \#XXX:'' on the first line where XXX is the number of that test case starting from $1$.
+Then output the number of palindromic numbers you used, $n$, on one line. $n$ must be no more than $50$. 
+Then output $n$ lines, each containing one of your palindromic numbers. Their sum must be exactly $s$.
+
+\secsample
+\sample{
+2\\
+18\\
+1000000000000
+} {
+Case \#1:\\
+2\\
+9\\
+9\\
+Case \#2:\\
+2\\
+999999999999\\
+1
+}
+\sechint
+$9+9=18$
+
+$999999999999+1=1000000000000$
+\end{document}
